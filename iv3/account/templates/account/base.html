@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="{% static 'account/css/style.css' %}">
+    
+    <title>iasolv3</title>
+</head>
+<body>
+    <div class="container">
+        <div class="topbar">
+            <div class="gambar"><img src="{% static 'account/img/unaki.png'%}" alt=""></div>
+            <div class="menu">
+                <img src="{% static 'account/img/logout.png' %}" alt="">
+                <a href="">logout</a>
+            </div>
+        </div>
+
+
+        
+            {% block content %}{% endblock content %}
+
+            
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <img src="{% static 'account/icon/mahasiswa.png' %}" alt=""><a href="">Beranda</a> 
+                </li>
+'                <li>
+                    <img src="{% static 'account/icon/mahasiswa.png' %}" alt=""><a href="">Mahasiswa</a> 
+                </li>
+                <li>
+                    <img src="{% static 'account/icon/jurusan.png' %}" alt=""><a href="">Jurusan</a>
+                </li>
+                <li>
+                    <img src="{% static 'account/icon/nilai.png' %}" alt=""><a href="">Nilai</a>
+                </li>
+                <li>
+                    <img src="{% static 'account/icon/dosen.png' %}" alt=""><a href="">Dosen</a>
+                </li>
+                <li>
+                    <img src="{% static 'account/icon/matakuliah.png' %}" alt=""><a href="">Matakuliah</a>
+                </li>
+                <li>
+                    <img src="{% static 'account/icon/jadwal.png' %}" alt=""><a href="">Jadwal</a>
+                </li>
+                <li>
+                    <img src="{% static 'account/icon/ruangan.png' %}" alt=""><a href="">Ruangan</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,203 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* my css */
+
+.container {
+    display: grid;
+    grid-template-areas: 'topbar topbar'
+                         'sidebar content'
+                         'footer footer';
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 200px 3.5fr 0.5fr;
+}
+.topbar {
+    grid-area: topbar;
+    background-color:  rgb(193, 220, 243);
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color: white;
+    box-shadow: 3px 23px 5px rgba(0,0,0,.5);
+}
+.sidebar ul {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.sidebar ul li {
+    padding-bottom: 30px;
+}
+.sidebar ul li img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.sidebar ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 20pt;
+    text-align: left;
+}
+.content {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    background-color: white;
+
+
+}
+.mahasiswa img,.dosen img,.jadwal img,.matakuliah img {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    background-color: rgb(240, 230, 230);
+    border-radius: 50%;
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,.5));
+}
+.mahasiswa,.dosen,.jadwal,.matakuliah {
+ 
+    width: 350px;
+    height: 200px;
+    margin-top: -40px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.5);
+}
+.mahasiswa h1,.dosen h1,.jadwal h1,.matakuliah h1 {
+    font-size: 50pt;
+    color: black;
+    font-family: 'Patrick Hand', cursive;
+}
+.mahasiswa,.dosen,.jadwal,.matakuliah:hover{
+    background-color: rgb(109, 93, 93);
+}
+.mahasiswa {
+   background-color: green;
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+.mahasiswa p,.dosen p,.jadwal p,.matakuliah p{
+    font-size: 30pt;
+    margin: auto;
+    color: white;
+    font-family: 'Patrick Hand', cursive;
+}
+.mahasiswa h1,.dosen h1,.jadwal h1,.matakuliah h1 {
+    margin-left: 20px;
+}
+.dosen {
+    background-color: rgb(70, 170, 216);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+.jadwal {
+    background-color: gold;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+.matakuliah {
+    background-color: maroon;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+.jurusan {
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+.ruangan {
+    background-color: aquamarine;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+.footer {
+    height: 200px;
+    grid-area: footer;
+    background-color: rgb(84, 185, 243);
+}
+.container .topbar .gambar img {
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+    filter: drop-shadow(1px 2px 0 rgba(252, 250, 250, 0.9));
+}
+.container .topbar .menu {
+    display: grid;
+    background-color: rgb(193, 220, 243);
+    justify-content: end;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 20pt;
+    padding: 20px;
+    display: flex;
+    gap: 5px;
+    
+}
+.container .topbar .menu img{
+    width: 30px;
+    height: 30px;
+}
+.container .topbar .menu a {
+    text-decoration: none;
+    color: rgb(32, 32, 238);
+    text-shadow: 1px 2px 0 rgba(252, 250, 250, 0.9);
+    height: 30px;
+}
+.sidebar ul li a:hover {
+    text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+}
